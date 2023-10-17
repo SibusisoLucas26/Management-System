@@ -1,0 +1,61 @@
+body{
+background-color: #3fbfaf;
+	
+}
+
+#edit{
+background-color: rgb(53, 132, 228);
+font-family: Arial;
+color:white;
+padding: 5px 6px;
+border-radius: 4px;	
+}
+#edit tr:hover{
+	background-color:blue;
+}
+
+#delete{
+background-color: #e01b24;
+font-family: Arial;
+color:white;
+padding: 5px 6px;
+border-radius: 4px;
+}
+#delete tr:hover{
+	background-color:red;
+}
+
+h1{
+font-family: Arial;
+text-align: center;
+background-color: #000000;
+color: white;	
+	
+}
+
+#employee{
+font-family: Arial;
+border-collapse: collapse;
+width: 70%;
+text-align: center;
+}
+
+#employee th, #employee td { 
+border: 1px solid black;
+padding: 8px;
+
+}
+
+#employee tr:hover {
+background-color: #57e389;
+}
+
+#employee tr{
+background-color: white;	
+}
+
+#employee th {
+background-color: #060606;
+color: white;
+}
+

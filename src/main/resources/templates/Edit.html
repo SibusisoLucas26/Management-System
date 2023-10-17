@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th= "http:/www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<style type="text/css">
+
+form {
+	text-align:center;
+}
+
+label{
+color: white;
+}
+
+h1{
+font-family: Arial;
+text-align: center;
+background-color: #000000;
+color: white;	
+}
+
+input[type=text]{
+border: 2px solid #57e389;
+border-radius: 4px;
+box-sizing: border-box;
+background-color: white;	
+}
+
+botton[type=submit]{
+	background-color: green;
+}
+
+body{
+background-color: #3fbfaf;	
+}
+
+</style>
+
+<title>Employee Management System</title>
+</head>
+<body>
+<h1>Update Employee</h1>
+<br>
+<form th:action="@{/employee/{id} (id=${employee.id})}" th:object="${employee}" method="post">
+
+<label>FirstName</label>
+<br>
+<input
+type="text"
+name="firstName"
+th:field="*{firstName}"
+placeholder="Enter firstName"
+/>
+<br>
+<br>
+<label>LastName</label>
+<br>
+<input
+type="text"
+name="lastName"
+th:field="*{lastName}"
+placeholder="Enter lastName"
+/>
+<br>
+<br>
+<label>Work Department</label>
+<br>
+<input
+type="text"
+name="workDepartment"
+th:field="*{workDepartment}"
+placeholder="Enter Department"
+/>
+<br>
+<br>
+<label>Email</label>
+<br>
+<input
+type="text"
+name="email"
+th:field="*{email}"
+placeholder="Enter email"
+/>
+<br>
+<br>
+<button type="submit">Submit</button>
+
+</form>
+</body>
+</html>

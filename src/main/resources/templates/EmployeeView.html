@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th= "http:/www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employees Management System</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>Employee Management System</h1>
+<br>
+<a th:href="@{/employee/new}" id="edit">Add</a>
+<br>
+<br>
+<table id="employee" >
+
+<tr>
+<th>Employee Id</th>
+<th>FirstName</th>
+<th>LastName</th>
+<th>Work Department</th>
+<th>Email</th>
+<th>Action</th>
+</tr>
+
+<tbody>
+<tr th:each = "employee:${employees}">
+
+<td th:text = "${employee.id}"></td>
+<td th:text = "${employee.firstName}"></td>
+<td th:text = "${employee.lastName}"></td>
+<td th:text = "${employee.workDepartment}"></td>
+<td th:text = "${employee.email}"></td>
+<td>
+ <a th:href="@{/employee/edit/{id} (id=${employee.id})}" id="edit">Edit</a>
+ <a th:href="@{/employee/delete/{id} (id=${employee.id})}" id="delete" >Delete</a>
+</td>
+
+
+</tr>
+
+</tbody>
+
+</table>
+</body>
+</html>
